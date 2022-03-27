@@ -24,7 +24,7 @@ public class NativeDeviceInfoProvider extends ContextWrapper {
     public Properties getNativeDeviceProperties() {
         Properties properties = new Properties();
 
-        properties.setProperty("UserReadableName", "${Build.DEVICE}-default");
+        properties.setProperty("UserReadableName", Build.DEVICE + "-default");
         properties.setProperty("Build.HARDWARE", Build.HARDWARE);
         properties.setProperty("Build.RADIO", Build.getRadioVersion() != null ? Build.getRadioVersion() : "unknown");
         properties.setProperty("Build.FINGERPRINT", Build.FINGERPRINT);
